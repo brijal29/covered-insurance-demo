@@ -1,0 +1,68 @@
+
+body {
+  overflow:auto ; /* Hide scrollbars */
+}
+.footer-section{
+    background-color: #10375d;
+    color:#fff;
+}
+
+.maritalStatus{
+  background-color: #fff !important;
+}
+.userForm{
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 10%;
+  box-shadow: 4px 0px 10px #212020;
+  
+}
+
+.form-group label{
+  color: #6543ab;
+}
+
+.mainClass{
+  /* top, transparent red */ 
+ 
+/* background-image: url("../../public/images/bg.png"); */
+/* background-color: #a4508b; */
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url("https://www.infipi.com/wp-content/uploads/2020/01/web-design-new.jpg")
+
+}
+.customButton{
+background-color: #a4508b;
+background-image: linear-gradient(326deg, #5246c6 0%, #552aaf 74%);
+border-color:none !important;
+width: 25% !important;  
+border-radius: 25px !important;
+}
+.formTitle{
+  color:#fff;
+}
+
+.form-control:focus  {
+  border-color: #ccc !important;
+}
+.backBtn{
+  float: right;
+  background-color: #a4508b;
+  background-image: linear-gradient(326deg, #5246c6 0%, #552aaf 74%);
+  border-radius: 15px;
+  padding:5px 10px;  
+  margin: 10px 0px;
+  text-decoration: none;
+  color: #fff;
+}
+a:hover{
+  text-decoration: none;
+  color: #fff !important;
+}
+.groupTitle{
+  background-color: #b6b6b6d6 !important;
+  font-size: 18px;
+  color: #fff;
+}

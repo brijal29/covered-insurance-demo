@@ -112,7 +112,7 @@ const UserForm = (props) => {
     <main className="mainClass">
       <Container>
         <Row>
-          <Col md={{ span: 8, offset: 2 }} className="my-4 text-center">
+          <Col md={{ span: 8, offset: 2 }} className="my-3 text-center">
             <h2 className="formTitle">Welcome!</h2>
           </Col>
           <Col md={{ span: 8, offset: 2 }}>

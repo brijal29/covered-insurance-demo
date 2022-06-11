@@ -2,11 +2,18 @@
 body {
 background-size: cover;
 background-repeat: no-repeat;
-background-image: url("https://www.infipi.com/wp-content/uploads/2020/01/web-design-new.jpg")
+background-image: url("https://www.infipi.com/wp-content/uploads/2020/01/web-design-new.jpg");
+
 }
 .footer-section{
-    background-color: #10375d;
     color:#fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:  #000;;
+    color: white;
+    text-align: center;
 }
 
 .maritalStatus{
@@ -39,6 +46,11 @@ border-color:none !important;
 width: 25% !important;  
 border-radius: 25px !important;
 }
+@media only screen and (max-width: 767px) {
+  .customButton{
+    width: 45% !important;  
+  }
+}
 .formTitle{
   color:#fff;
 }
@@ -48,8 +60,7 @@ border-radius: 25px !important;
 }
 .backBtn{
   float: right;
-  background-color: #00000052;
-  
+  background-color: #00000052;  
   border-radius: 8px;
   padding: 5px 14px;
   margin: 10px 0px;
@@ -68,6 +79,9 @@ border-radius: 25px !important;
 .nav-link {
   padding: 12px 20px !important;
 }
+.tabClass{
+  margin-top: 20px;
+}
 .tabClass a{
   color: #fff !important;
   font-weight: 600;
@@ -75,7 +89,9 @@ border-radius: 25px !important;
 .tabClass a:hover{
   color: #fff;
 }
-
+.tab-content{
+  padding: 10px;
+}
 body {
   min-height: 100vh;
   padding: 0;

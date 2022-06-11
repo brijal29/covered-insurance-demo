@@ -8,6 +8,8 @@ import {
   NavItem,
   Table,
 } from "react-bootstrap";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 import { Redirect, Link } from "react-router-dom";
 import swal from "sweetalert";
 import "../style/main.css";
@@ -45,7 +47,7 @@ const Result = (props) => {
   }, []);
 
   return (
-    <Container>
+    <Container className="resultData">
       {/* Fizz Data Group */}
       <Row>
         <Col md={{ span: 12, offset: 0 }} className="">
@@ -54,75 +56,115 @@ const Result = (props) => {
           </Link>
         </Col>
       </Row>
-      <Row>
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Gender</th>
-              <th>Marital Status</th>
-              <th>Date of Birth</th>
-              <th>Arbitary Integer</th>
-            </tr>
-          </thead>
-          <tr className="text-center groupTitle">
-            <td colspan="5">Fizz Data</td>
-          </tr>
-          <tbody>
-            {fizzData.map((user) => (
-              <tr>
-                <td>{user.name}</td>
-                <td>{user.gender}</td>
-                <td>{user.maritalStatus}</td>
-                <td>{user.dob}</td>
-                <td>{user.arbInteger}</td>
-              </tr>
-            ))}
-          </tbody>
-          <tr className="text-center groupTitle">
-            <td colspan="5">Buzz Data</td>
-          </tr>
-          <tbody>
-            {buzzData.map((user) => (
-              <tr>
-                <td>{user.name}</td>
-                <td>{user.gender}</td>
-                <td>{user.maritalStatus}</td>
-                <td>{user.dob}</td>
-                <td>{user.arbInteger}</td>
-              </tr>
-            ))}
-          </tbody>
-          <tr className="text-center groupTitle">
-            <td colspan="5">FizzBuzz Data</td>
-          </tr>
-          <tbody>
-            {fizzBuzzData.map((user) => (
-              <tr>
-                <td>{user.name}</td>
-                <td>{user.gender}</td>
-                <td>{user.maritalStatus}</td>
-                <td>{user.dob}</td>
-                <td>{user.arbInteger}</td>
-              </tr>
-            ))}
-          </tbody>
-          <tr className="text-center groupTitle">
-            <td colspan="5">Other Data</td>
-          </tr>
-          <tbody>
-            {otherData.map((user) => (
-              <tr>
-                <td>{user.name}</td>
-                <td>{user.gender}</td>
-                <td>{user.maritalStatus}</td>
-                <td>{user.dob}</td>
-                <td>{user.arbInteger}</td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-      </Row>
+      <div className="col-md-12 col-lg-12 col-sm-12 col-xs-12 tabClass">
+        <Tabs defaultActiveKey="second">
+          <Tab eventKey="first" title="Fizz">
+            <Row>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Marital Status</th>
+                    <th>Date of Birth</th>
+                    <th>Arbitary Integer</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {fizzData.map((user) => (
+                    <tr>
+                      <td>{user.name}</td>
+                      <td>{user.gender}</td>
+                      <td>{user.maritalStatus}</td>
+                      <td>{user.dob}</td>
+                      <td>{user.arbInteger}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </Row>
+          </Tab>
+          <Tab eventKey="second" title="Buzz">
+            <Row>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Marital Status</th>
+                    <th>Date of Birth</th>
+                    <th>Arbitary Integer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {buzzData.map((user) => (
+                    <tr>
+                      <td>{user.name}</td>
+                      <td>{user.gender}</td>
+                      <td>{user.maritalStatus}</td>
+                      <td>{user.dob}</td>
+                      <td>{user.arbInteger}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </Row>
+          </Tab>
+          <Tab eventKey="third" title="FizzBuzz">
+            <Row>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Marital Status</th>
+                    <th>Date of Birth</th>
+                    <th>Arbitary Integer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {fizzBuzzData.map((user) => (
+                    <tr>
+                      <td>{user.name}</td>
+                      <td>{user.gender}</td>
+                      <td>{user.maritalStatus}</td>
+                      <td>{user.dob}</td>
+                      <td>{user.arbInteger}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </Row>
+          </Tab>
+          <Tab eventKey="fourth" title="Other">
+            <Row>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Marital Status</th>
+                    <th>Date of Birth</th>
+                    <th>Arbitary Integer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {otherData.map((user) => (
+                    <tr>
+                      <td>{user.name}</td>
+                      <td>{user.gender}</td>
+                      <td>{user.maritalStatus}</td>
+                      <td>{user.dob}</td>
+                      <td>{user.arbInteger}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </Row>
+          </Tab>
+        </Tabs>
+      </div>
     </Container>
   );
 };

@@ -124,7 +124,7 @@ table{
     padding-bottom: 130px;
   }
   .headerTitle{
-    padding: 0;
+    padding: 0 !important;
   }
   
 }

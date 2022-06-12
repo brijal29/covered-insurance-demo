@@ -54,6 +54,7 @@ const UserForm = (props) => {
         dob: date,
         arbInteger: arbInteger,
       };
+      var tabsName = "";
       if (arbInteger % 15 == 0) {
         if (localStorage.getItem("fizzbuzz")) {
           var getData = localStorage.getItem("fizzbuzz");
@@ -65,6 +66,7 @@ const UserForm = (props) => {
           fizzbuzz.push(obj);
           localStorage.setItem("fizzbuzz", JSON.stringify(fizzbuzz));
         }
+        localStorage.setItem("tabsName", "third");
       } else if (arbInteger % 3 == 0) {
         if (localStorage.getItem("fizz")) {
           var getData = localStorage.getItem("fizz");
@@ -76,6 +78,7 @@ const UserForm = (props) => {
           fizz.push(obj);
           localStorage.setItem("fizz", JSON.stringify(fizz));
         }
+        localStorage.setItem("tabsName", "first");
       } else if (arbInteger % 5 == 0) {
         if (localStorage.getItem("buzz")) {
           var getData = localStorage.getItem("buzz");
@@ -87,6 +90,7 @@ const UserForm = (props) => {
           buzz.push(obj);
           localStorage.setItem("buzz", JSON.stringify(buzz));
         }
+        localStorage.setItem("tabsName", "second");
       } else {
         if (localStorage.getItem("other")) {
           var getData = localStorage.getItem("other");
@@ -98,6 +102,7 @@ const UserForm = (props) => {
           other.push(obj);
           localStorage.setItem("other", JSON.stringify(other));
         }
+        localStorage.setItem("tabsName", "fourth");
       }
 
       setName("");

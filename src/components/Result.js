@@ -19,7 +19,7 @@ const Result = (props) => {
   const [buzzData, setBuzzData] = useState([]);
   const [fizzBuzzData, setFizzBuzzData] = useState([]);
   const [otherData, setOtherData] = useState([]);
-
+  const [tName, setTabsName] = useState("");
   const fetchData = () => {
     // Get fizz data logic
     var getFizzData = localStorage.getItem("fizz");
@@ -41,6 +41,14 @@ const Result = (props) => {
     var getOtherData = localStorage.getItem("other");
     getOtherData = getOtherData ? JSON.parse(getOtherData) : [];
     setOtherData(getOtherData);
+
+    // defaultActiveKey
+
+    if (localStorage.getItem("tabsName")) {
+      setTabsName(localStorage.getItem("tabsName"));
+    } else {
+      setTabsName("first");
+    }
   };
   useEffect(() => {
     fetchData();
@@ -57,7 +65,7 @@ const Result = (props) => {
         </Col>
       </Row>
       <div className="col-md-12 col-lg-12 col-sm-12 col-xs-12 tabClass">
-        <Tabs defaultActiveKey="second">
+        <Tabs activeKey={tName}>
           <Tab eventKey="first" title="Fizz">
             <Row>
               <Table striped bordered hover>

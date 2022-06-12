@@ -2,7 +2,7 @@
 
 ## Getting started
 
-You can view a live demo over at https://covered-insurance-demo-kuzl1dvs7-brijal29.vercel.app/
+You can view a live demo over at https://covered-insurance-demo-e4x1uh00o-brijal29.vercel.app/
 
 ## Setup
 

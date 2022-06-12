@@ -25,7 +25,7 @@ const Header = () => {
       <div className="sm-mx-none">
         <div className="container">
           <div className="row">
-            <div className="col-lg-10 col-md-9 col-sm-9 col-xs-12">
+            <div className="col-lg-10 col-md-9 col-sm-9 col-xs-12 headerTitle">
               <ul className="top-contact">
                 <li>
                   <a href="#" className="text-white">

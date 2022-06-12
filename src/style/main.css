@@ -123,5 +123,8 @@ table{
     overflow: scroll;
     padding-bottom: 130px;
   }
+  .headerTitle{
+    padding: 0;
+  }
   
 }

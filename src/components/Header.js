@@ -32,7 +32,7 @@ const Header = () => {
                     <span className="myLogo">
                       <b>BP</b>
                     </span>
-                    &nbsp;&nbsp;&nbsp; Covered Insurance Demo App
+                    &nbsp;&nbsp;&nbsp; Covered Insurance Demo
                   </a>
                 </li>
               </ul>

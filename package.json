@@ -27,8 +27,8 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/react-scripts start",
-    "build": "react-scripts --openssl-legacy-provider start",
-    "test": "react-scripts test",
+    "build": "react-scripts build",
+    "test": "react-scripts --openssl-legacy-provider start",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

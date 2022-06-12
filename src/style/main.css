@@ -116,12 +116,12 @@ table{
 @media only screen and (max-width: 480px) {
 
   .footer-section{
-    position: inherit;
+    height:130px;
   }
   .mainClass{
     margin-bottom: 20px;
     overflow: scroll;
-    padding-bottom: 30px;
+    padding-bottom: 130px;
   }
   
 }

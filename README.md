@@ -2,7 +2,7 @@
 
 ## Getting started
 
-You can view a live demo over at https://react-redux.realworld.io/
+You can view a live demo over at https://covered-insurance-demo-o3kxot775-brijal29.vercel.app/
 
 ## Setup
 

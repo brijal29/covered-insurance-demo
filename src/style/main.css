@@ -116,7 +116,7 @@ table{
 @media only screen and (max-width: 480px) {
 
   .footer-section{
-    position: unset;
+    position: inherit;
   }
   .mainClass{
     margin-bottom: 20px;

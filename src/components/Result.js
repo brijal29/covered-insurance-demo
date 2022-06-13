@@ -20,6 +20,7 @@ const Result = (props) => {
   const [fizzBuzzData, setFizzBuzzData] = useState([]);
   const [otherData, setOtherData] = useState([]);
   const [tName, setTabsName] = useState("");
+
   const fetchData = () => {
     // Get fizz data logic
     var getFizzData = localStorage.getItem("fizz");
@@ -50,6 +51,11 @@ const Result = (props) => {
       setTabsName("first");
     }
   };
+  const handleSelect = (e) => {
+    //set state
+    setTabsName(e);
+    //update url
+  };
   useEffect(() => {
     fetchData();
   }, []);
@@ -65,7 +71,10 @@ const Result = (props) => {
         </Col>
       </Row>
       <div className="col-md-12 col-lg-12 col-sm-12 col-xs-12 tabClass">
-        <Tabs activeKey={tName}>
+        <Tabs
+          activeKey={tName ? tName : "first"}
+          onSelect={(e) => handleSelect(e)}
+        >
           <Tab eventKey="first" title="Fizz">
             <Row>
               <Table striped bordered hover>
